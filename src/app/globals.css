@@ -1,0 +1,322 @@
+@import "tailwindcss";
+
+/* 🌈 Theme Variables */
+:root {
+  --background: #f9fafb;
+  --foreground: #1f2937;
+  --accent: #3b82f6;
+  --accent-light: #93c5fd;
+  --border-color: #e5e7eb;
+  --font-sans: 'Segoe UI', 'Noto Sans Thai', sans-serif;
+  --font-mono: 'Courier New', monospace;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #1f2937;
+    --foreground: #f3f4f6;
+    --accent: #60a5fa;
+    --accent-light: #bfdbfe;
+    --border-color: #374151;
+  }
+}
+
+/* 🧍‍♂️ Base Styles */
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+}
+
+/* 📄 Form Container */
+.form-container {
+  max-width: 640px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+}
+
+.form-container h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  border-bottom: 2px solid var(--accent-light);
+  padding-bottom: 0.5rem;
+}
+
+/* 🧾 Table Container */
+.table-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  background: var(--background);
+  border: 1px solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+  padding: 2rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+}
+
+th {
+  background-color: var(--accent-light);
+  color: var(--foreground);
+  padding: 0.75rem;
+  text-align: left;
+}
+
+td {
+  padding: 0.75rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+/* 🖼️ Student Photo */
+img.student-photo {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+/* 📁 Upload Preview */
+.upload-preview {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.upload-preview img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+  margin-top: 0.5rem;
+}
+
+/* 📦 Input & Button Styling */
+input[type="text"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid #d1d5db; /* กรอบสีเทาอ่อน */
+  border-radius: 8px;
+  background-color: #aab2c2; /* สีพื้นหลังช่อง */
+  color: #000000; /* ตัวหนังสือสีดำ */
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: #9ca3af; /* กรอบเข้มขึ้นเมื่อ hover */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent); /* กรอบสีฟ้าเมื่อ focus */
+  background-color: #e0f2fe; /* สีพื้นหลังฟ้าอ่อน */
+}
+
+button {
+  background-color: var(--accent);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: #2563eb;
+}
+/* 📦 Input & Textarea Styling */
+input[type="text"],
+input[type="file"],
+textarea,
+select {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  background-color: #f3f4f6; /* สีเทาอ่อน */
+  color: #000000; /* ตัวหนังสือสีดำ */
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  transition: border-color 0.2s ease-in-out, background-color 0.2s ease-in-out;
+}
+
+input:hover,
+textarea:hover,
+select:hover {
+  border-color: #9ca3af; /* กรอบเข้มขึ้นเมื่อ hover */
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent); /* กรอบสีฟ้าเมื่อ focus */
+  background-color: #e0f2fe; /* สีพื้นหลังฟ้าอ่อน */
+  color: #000000;
+}
+/* 🖼️ Upload Section Styling */
+.upload-preview {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+   /* สีพื้นหลังอ่อน */
+  padding: 1rem;
+  border-radius: 8px;
+  border: 1px dashed var(--border-color);
+  position: relative;
+}
+
+/* 🖼️ รูปภาพที่อัปโหลด */
+.upload-preview img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
+}
+
+
+/* form wrapper */
+.form-container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: #1e293b; /* slate-800 */
+  border-radius: 1rem;
+  color: white;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.4);
+}
+
+/* title */
+.form-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #38bdf8; /* sky-400 */
+  text-align: center;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #38bdf8;
+  padding-bottom: 0.5rem;
+}
+
+/* grid layout */
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem 2rem;
+}
+
+.form-grid label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.form-grid input,
+.form-grid textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid #475569; /* slate-600 */
+  background: #334155; /* slate-700 */
+  color: white;
+  outline: none;
+}
+
+.form-grid input:focus,
+.form-grid textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 2px rgba(56, 189, 248, 0.4);
+}
+
+/* preview image */
+.preview-img {
+  margin-top: 0.5rem;
+  max-height: 150px;
+  border-radius: 0.5rem;
+  border: 2px solid #38bdf8;
+}
+
+/* preview grid */
+.preview-grid {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.preview-grid img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 0.5rem;
+  border: 2px solid #38bdf8;
+}
+
+/* actions */
+.form-actions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+
+/* buttons */
+.btn-primary {
+  background: #3b82f6; /* blue-500 */
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-primary:hover {
+  background: #2563eb; /* blue-600 */
+}
+
+.btn-secondary {
+  background: #64748b; /* slate-500 */
+  color: white;
+  padding: 0.6rem 1.5rem;
+  border-radius: 0.75rem;
+  font-weight: 600;
+  transition: 0.2s;
+}
+
+.btn-secondary:hover {
+  background: #475569; /* slate-600 */
+}

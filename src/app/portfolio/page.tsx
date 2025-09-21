@@ -107,7 +107,7 @@ export default function PortfolioForm() {
             <textarea {...register('reason')} className="w-full p-2 rounded bg-gray-700 border border-gray-600" rows={3}></textarea>
           </div>
 
-           {/* Uploads */}
+           {/* Upload */}
         <div className="col-span-2">
           <label className="block mb-1">📸 รูปนักเรียน:</label>
           <input

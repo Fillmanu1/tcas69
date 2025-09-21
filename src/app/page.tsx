@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-//main
+//main.
 export default function Home() {
   return (
     <div className="font-sans min-h-screen flex flex-col items-center justify-center p-8 gap-8">

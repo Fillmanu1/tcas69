@@ -13,7 +13,7 @@ export type Portfolio = {
   reason: string;
   major: string;
   university: string;
-  photo?: string; // base64 or url
+  photo?: string; // base64 or URL
   activities?: string[];
   awards?: string[];
   works?: string[];

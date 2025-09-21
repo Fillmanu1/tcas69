@@ -118,7 +118,7 @@ select {
   padding: 0.75rem;
   margin-top: 0.5rem;
   margin-bottom: 1rem;
-  border: 2px solid #d1d5db; /* กรอบสีเทาอ่อน */
+  border: 2px solid #d1d5db; /* กรอบสีเทาอ่อน*/
   border-radius: 8px;
   background-color: #aab2c2; /* สีพื้นหลังช่อง */
   color: #000000; /* ตัวหนังสือสีดำ */

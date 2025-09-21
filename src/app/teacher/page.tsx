@@ -8,7 +8,7 @@ type SortKey = 'firstName' | 'lastName' | 'gpa';
 export default function TeacherPage() {
   const portfolios = usePortfolioStore(s => s.portfolios);
   //const removePortfolio = usePortfolioStore(s => s.removePortfolio);
-
+  //.
   const [sortKey, setSortKey] = useState<SortKey>('firstName');
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('asc');
 
